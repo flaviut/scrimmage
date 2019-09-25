@@ -11,6 +11,7 @@ macro(MacroCommonPaths NAME DIR_NAME)
       )
   ELSE()
     set(COMMON_INCLUDE_PATHS_${NAME}
+      ~/.local/include
       /opt/scrimmage/include
       ~/Library/Frameworks
       /Library/Frameworks
@@ -39,6 +40,7 @@ macro(MacroCommonPaths NAME DIR_NAME)
       )
   ELSE()
     set(COMMON_LIBRARY_PATHS_${NAME}
+      ~/.local/lib
       /opt/scrimmage/lib
       ~/Library/Frameworks
       /Library/Frameworks
@@ -55,6 +57,7 @@ macro(MacroCommonPaths NAME DIR_NAME)
   ENDIF()
 
   set(COMMON_DATA_PATHS_${NAME}
+    ~/.local/share
     $ENV{${NAME}_DIR}/share
     $ENV{${NAME}_DIR}
     $ENV{${NAME}_ROOT}/share
